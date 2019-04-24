@@ -64,5 +64,15 @@
                 android:hint="@string/cumpleanios" />
 
         </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/colorAccent"
+            android:text="@string/bt_guardar"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 </RelativeLayout>

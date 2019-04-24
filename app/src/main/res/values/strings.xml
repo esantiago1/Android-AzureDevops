@@ -9,4 +9,5 @@
     <string name="age">Ingrese su edad</string>
     <string name="apellidos">Apellidos</string>
     <string name="Name">Nombres y apellidos</string>
+    <string name="bt_guardar">Guardar en DB_REAL_TIME</string>
 </resources>
