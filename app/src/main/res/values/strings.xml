@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">OH!</string>
+
+
+    <string name="facebook_app_id">446841372736285</string>
+    <string name="fb_login_protocol_scheme">fb446841372736285</string>
+    <string name="somosoh">FINACIERA OH</string>
+    <string name="cumpleanios">Ingrese su cumpleaños</string>
+    <string name="age">Ingrese su edad</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="Name">Nombres y apellidos</string>
+</resources>

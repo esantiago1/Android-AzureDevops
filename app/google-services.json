@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "499831769033",
+    "firebase_url": "https://somosoh-f1046.firebaseio.com",
+    "project_id": "somosoh-f1046",
+    "storage_bucket": "somosoh-f1046.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499831769033:android:bd794282c4746d7a",
+        "android_client_info": {
+          "package_name": "com.demo.demosomosoh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499831769033-p1pj0vjh7l9umlu7ljgdf7git869n396.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlsOlbfRHaq1nKQEGYExU4rddY0X-Yr3c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499831769033-p1pj0vjh7l9umlu7ljgdf7git869n396.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
