@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+    <include layout="@layout/toolbar" />
 
 
     <LinearLayout
@@ -15,13 +16,18 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp">
+            android:layout_height="60dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp">
 
             <EditText
                 android:id="@+id/tvEmail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="@string/Name" />
+                android:hint="@string/Name"
+                android:inputType="textEmailAddress" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -29,50 +35,74 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="16dp">
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp">
 
             <EditText
                 android:id="@+id/tvLastName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="@string/apellidos" />
+                android:hint="@string/apellidos"
+                android:inputType="textPersonName" />
 
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="16dp">
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp">
 
             <EditText
                 android:id="@+id/tvAge"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="@string/age" />
+                android:hint="@string/age"
+                android:inputType="number" />
 
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="16dp">
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp">
 
             <EditText
                 android:id="@+id/tvBirthday"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="@string/cumpleanios" />
+                android:hint="@string/cumpleanios"
+                android:inputType="date" />
 
         </android.support.design.widget.TextInputLayout>
 
 
-        <Button
+        <android.support.design.button.MaterialButton
             android:id="@+id/btSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_margin="26dp"
             android:background="@color/colorAccent"
             android:text="@string/bt_guardar"
             android:textColor="@android:color/white" />
+
+
+        <Button
+            android:id="@+id/btSecurity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:background="@color/colorAccent"
+            android:text="@string/huella"
+            android:textColor="@android:color/white" />
+
     </LinearLayout>
 </RelativeLayout>

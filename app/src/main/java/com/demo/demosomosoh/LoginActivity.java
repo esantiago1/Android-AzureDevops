@@ -2,14 +2,12 @@ package com.demo.demosomosoh;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.support.v7.widget.Toolbar;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -17,14 +15,10 @@ import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -34,14 +28,16 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private FirebaseAuth auth;
-    private FirebaseDatabase database;
     private RelativeLayout content;
+
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        setupFaribase();
+        auth = FirebaseAuth.getInstance();
+        toolbar = findViewById(R.id.toolbar);
         content = findViewById(R.id.content);
         callbackManager = CallbackManager.Factory.create();
         loginButton = findViewById(R.id.loginButton);
@@ -62,11 +58,7 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
-    }
-
-    private void setupFaribase() {
-        database = FirebaseDatabase.getInstance();
-        auth = FirebaseAuth.getInstance();
+        setupToolbar();
     }
 
     @Override
@@ -74,7 +66,6 @@ public class LoginActivity extends AppCompatActivity {
         callbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
     }
-
 
     private void passMainActivity(Model model) {
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -88,14 +79,24 @@ public class LoginActivity extends AppCompatActivity {
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         FirebaseUser user = auth.getCurrentUser();
-                        Model model=new Model();
-                        model.setEmail(user.getEmail());
-                        model.setLastName(user.getDisplayName());
-                        //Toast.makeText(LoginActivity.this, user.getEmail()+" "+user.getDisplayName(), Toast.LENGTH_SHORT).show();
-                        passMainActivity(model);
+                        if(user!=null) {
+                            Model model = new Model();
+                            model.setEmail(user.getEmail());
+                            model.setLastName(user.getDisplayName());
+                            //Toast.makeText(LoginActivity.this, user.getEmail()+" "+user.getDisplayName(), Toast.LENGTH_SHORT).show();
+                            passMainActivity(model);
+                        }
                     } else {
                         Snackbar.make(content, "Fallo la autentificacion", Snackbar.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+    private void setupToolbar() {
+        setSupportActionBar(toolbar);
+        ActionBar ab = getSupportActionBar();
+        if (ab != null) {
+            ab.setDisplayHomeAsUpEnabled(true);
+        }
     }
 }

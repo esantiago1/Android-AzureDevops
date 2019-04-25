@@ -4,10 +4,30 @@
 
     <string name="facebook_app_id">446841372736285</string>
     <string name="fb_login_protocol_scheme">fb446841372736285</string>
-    <string name="somosoh">FINACIERA OH</string>
+    <string name="somosoh">FINANCIERA OH</string>
     <string name="cumpleanios">Ingrese su cumpleaños</string>
     <string name="age">Ingrese su edad</string>
-    <string name="apellidos">Apellidos</string>
-    <string name="Name">Nombres y apellidos</string>
+    <string name="apellidos">Nombre y apellidos</string>
+    <string name="Name">Correo</string>
     <string name="bt_guardar">Guardar en DB_REAL_TIME</string>
+    <string name="message_splash">Pantalla Splash\n que verifica si existe cuenta en\nfirebase auth</string>
+    <string name="exit">Salir</string>
+    <string name="text_security">TEXTO SEGURO</string>
+    <string name="next">Continuar</string>
+    <string name="info">info</string>
+    <string name="licence_software">Libreria externa</string>
+    <string name="message_info">-Para la autentificación dactilar se uso la libreria <a href="https://github.com/anitaa1990/Biometric-Auth-Sample">biometric-auth</a></string>
+    <string name="accept_general">Aceptar</string>
+    <string name="huella">Huella</string>
+
+
+    <string name="biometric_description">Coloque su dedo en el botón de inicio del dispositivo para verificar su identidad</string>
+    <string name="biometric_negative_button_text">CANCELAR</string>
+    <string name="biometric_error_sdk_not_supported">Versión no admitida</string>
+    <string name="biometric_error_hardware_not_supported">El dispositivo no admite la autenticación biométrica</string>
+    <string name="biometric_error_fingerprint_not_available">La huella digital no está registrada en el dispositivo</string>
+    <string name="biometric_error_permission_not_granted">El usuario no concede el permiso</string>
+    <string name="biometric_failure">¡El inicio de sesión no fue exitoso!</string>
+    <string name="biometric_cancelled">Autentificación cancelada por usuario</string>
+    <string name="biometric_success">Inicio de sesión exitoso</string>
 </resources>

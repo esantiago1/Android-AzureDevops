@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/option_exit"
+        android:icon="@drawable/ic_action_exit_to_app"
+        android:title="@string/exit"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/option_info"
+        android:icon="@drawable/ic_action_info_outline"
+        android:title="@string/info"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+</menu>
