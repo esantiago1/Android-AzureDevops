@@ -27,4 +27,3 @@ steps:
     apksignerKeystorePassword: 'e1234ca'
     apksignerKeystoreAlias: 'edwin'
     apksignerKeyPassword: 'e1234ca'
-    zipalign: true
