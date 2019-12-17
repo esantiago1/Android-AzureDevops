@@ -22,7 +22,9 @@ steps:
 - task: AndroidSigning@3
   inputs:
     apkFiles: '**/*.apk'
+    apksign: true
     apksignerKeystoreFile: 'demooh.jks'
     apksignerKeystorePassword: 'e1234ca'
     apksignerKeystoreAlias: 'edwin'
     apksignerKeyPassword: 'e1234ca'
+    zipalign: true
