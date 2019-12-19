@@ -24,7 +24,7 @@ steps:
   inputs:
     apkFiles: '**/*.apk'
     apksignerKeystorePassword: 'e1234ca'
-    apksignerKeystoreAlias: 'edwin'
+    apksignerKeystoreAlias: '$ALIAS'
     apksignerKeyPassword: 'e1234ca'
     zipalign: false
 - task: CopyFiles@2
