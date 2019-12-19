@@ -25,4 +25,17 @@ steps:
     apkFiles: '**/*.apk'
     apksign: false
     zipalign: false
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(system.defaultworkingdirectory)'
+    Contents: '**/*.apk'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+    OverWrite: true
 - task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: 'apks'
+    publishLocation: 'Container'
+
+
+
