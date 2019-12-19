@@ -25,10 +25,4 @@ steps:
     apkFiles: '**/*.apk'
     apksign: false
     zipalign: false
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(Build.SourcesDirectory)'
-    Contents: '**/*.debug.apk'
-    TargetFolder: '$(Build.artifactStagingDirectory)'
-    OverWrite: true
 - task: PublishBuildArtifacts@1
