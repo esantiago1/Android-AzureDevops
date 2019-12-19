@@ -25,7 +25,7 @@ steps:
     apkFiles: '**/*.apk'
     apksignerKeystoreFile: 'demooh.jks'
     apksignerKeystorePassword: 'e1234ca'
-    apksignerKeystoreAlias: '$ALIAS'
+    apksignerKeystoreAlias: 'aliasValue'
     apksignerKeyPassword: 'e1234ca'
     zipalign: false
 - task: CopyFiles@2
