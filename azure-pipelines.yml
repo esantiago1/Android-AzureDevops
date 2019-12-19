@@ -32,7 +32,3 @@ steps:
     TargetFolder: '$(Build.artifactStagingDirectory)'
     OverWrite: true
 - task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.artifactStagingDirectory)'
-    ArtifactName: 'apks'
-    publishLocation: 'Container'
