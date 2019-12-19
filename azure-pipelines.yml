@@ -33,6 +33,6 @@ steps:
     OverWrite: true
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/app/build/outputs/apk/debug/'
+    PathtoPublish: '$(build.artifactstagingdirectory)'
     ArtifactName: 'apks'
     publishLocation: 'Container'
