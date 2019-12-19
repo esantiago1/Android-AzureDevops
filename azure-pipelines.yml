@@ -24,6 +24,7 @@ steps:
   inputs:
     apkFiles: '**/*.apk'
     apksign: false
+    zipalign: false
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
