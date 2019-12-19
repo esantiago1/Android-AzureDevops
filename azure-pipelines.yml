@@ -19,6 +19,13 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'assembleDebug'
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)'
+    Contents: '**/*.release.apk'
+    TargetFolder: '$(build.artifactStagingDirectory)'
+    OverWrite: true
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
