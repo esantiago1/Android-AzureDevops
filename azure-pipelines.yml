@@ -29,10 +29,10 @@ steps:
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
     Contents: '**/*.debug.apk'
-    TargetFolder: '$(build.artifactStagingDirectory)'
+    TargetFolder: '$(Build.artifactStagingDirectory)'
     OverWrite: true
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
+    PathtoPublish: '$(Build.artifactStagingDirectory)'
     ArtifactName: 'apks'
     publishLocation: 'Container'
