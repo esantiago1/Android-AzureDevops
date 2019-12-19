@@ -30,5 +30,5 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/app/build/outputs/apk/debug/'
-    ArtifactName: 'drop'
+    ArtifactName: 'apks'
     publishLocation: 'Container'
