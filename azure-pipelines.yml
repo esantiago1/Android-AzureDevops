@@ -19,14 +19,12 @@ steps:
     jdkVersionOption: '1.8'
     gradleOptions: '-Xmx3072m'
     sonarQubeRunAnalysis: false
-
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
     Contents: '**/*.debug.apk'
     TargetFolder: '$(build.artifactStagingDirectory)'
     OverWrite: true
-
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/app/build/outputs/apk/debug/'
