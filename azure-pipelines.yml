@@ -13,12 +13,13 @@ steps:
 - task: Gradle@2
   inputs:
     gradleWrapperFile: 'gradlew'
-    tasks: 'assembleDebug'
-    publishJUnitResults: false
+    gradleOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
-    gradleOptions: '-Xmx3072m'
-    sonarQubeRunAnalysis: false
+    jdkArchitectureOption: 'x64'
+    publishJUnitResults: false
+    testResultsFiles: '**/TEST-*.xml'
+    tasks: 'assembleDebug'
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
