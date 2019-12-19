@@ -23,7 +23,9 @@ steps:
 - task: AndroidSigning@3
   inputs:
     apkFiles: '**/*.apk'
-    apksign: false
+    apksignerKeystorePassword: 'e1234ca'
+    apksignerKeystoreAlias: 'edwin'
+    apksignerKeyPassword: 'e1234ca'
     zipalign: false
 - task: CopyFiles@2
   inputs:
