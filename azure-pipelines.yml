@@ -6,11 +6,11 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'macos-latest'
-
 variables:
   - group: build-release-apk-variables
+
+pool:
+  vmImage: 'macos-latest'
 
 steps:
 - task: Gradle@2
