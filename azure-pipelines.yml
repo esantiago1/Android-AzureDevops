@@ -6,9 +6,6 @@
 trigger:
 - master
 
-variables:
-  - group: build-release-apk-variables
-
 pool:
   vmImage: 'macos-latest'
 
