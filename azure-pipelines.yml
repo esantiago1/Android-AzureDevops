@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: 'macos-latest'
 
+variables:
+  - group: build-release-apk-variables
+
 steps:
 - task: Gradle@2
   inputs:
