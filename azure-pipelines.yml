@@ -38,12 +38,8 @@ steps:
     PathtoPublish: '$(build.artifactstagingdirectory)'
     ArtifactName: 'apks'
     publishLocation: 'Container'
-- task: GooglePlayRelease@3
-  inputs:
-    authType: 'JsonFile'
-    serviceAccountKey: 'api-6681251424038406103-254093-94ef5a4c4b24.json'
-    apkFile: '**/*.apk'
-    track: 'production'
+
+
 
 
 
