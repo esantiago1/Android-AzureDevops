@@ -29,7 +29,7 @@ steps:
     apksignerKeyPassword: '$(keyPassword)'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(system.sourcesdirectory)'
+    SourceFolder: '$(system.defaultworkingdirectory)'
     Contents: '**/*.apk'
     TargetFolder: '$(build.artifactstagingdirectory)'
     OverWrite: true
