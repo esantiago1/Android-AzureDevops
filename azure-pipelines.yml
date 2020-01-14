@@ -27,16 +27,16 @@ steps:
     apksignerKeystorePassword: '$(storePassword)'
     apksignerKeystoreAlias: '$(keyAlias)'
     apksignerKeyPassword: '$(keyPassword)'
-    apksignerArguments: '--out $(build.sourcesdirectory)/demo-release.apk'
+    apksignerArguments: '--out $(system.sourcesdirectory)/demo-release.apk'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(build.sourcesdirectory)'
+    SourceFolder: '$(system.sourcesdirectory)'
     Contents: '**/*release.apk'
     TargetFolder: '$(build.artifactstagingdirectory)'
     OverWrite: true
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)/'
+    PathtoPublish: '$(build.artifactstagingdirectory)'
     ArtifactName: 'apks'
     publishLocation: 'Container'
 
