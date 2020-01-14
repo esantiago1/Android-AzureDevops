@@ -30,7 +30,7 @@ steps:
     apksignerArguments: '--out $(build.sourcesdirectory)/app/build/outputs/apk/release/my-crazy-app.release.apk'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(system.sourcesdirectory)'
+    SourceFolder: '$(build.sourcesdirectory)'
     Contents: '**/*release.apk'
     TargetFolder: '$(build.artifactstagingdirectory)'
     OverWrite: true
