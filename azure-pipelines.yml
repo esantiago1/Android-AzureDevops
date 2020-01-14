@@ -22,7 +22,7 @@ steps:
     tasks: 'assembleRelease'
 - task: AndroidSigning@3
   inputs:
-    apkFiles: '**/*.apk'
+    apkFiles: '**/demo.apk'
     apksignerKeystoreFile: 'key-demo.jks'
     apksignerKeystorePassword: '$(storePassword)'
     apksignerKeystoreAlias: '$(keyAlias)'
