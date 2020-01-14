@@ -27,7 +27,7 @@ steps:
     apksignerKeystorePassword: '$(storePassword)'
     apksignerKeystoreAlias: '$(keyAlias)'
     apksignerKeyPassword: '$(keyPassword)'
-    apksignerArguments: '--out $(build.sourcesdirectory)/app/build/outputs/apk/release/my-crazy-app.release.apk'''
+    apksignerArguments: '--out $(build.sourcesdirectory)/app/build/outputs/apk/release/my-crazy-app.release.apk'
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(system.sourcesdirectory)'
