@@ -33,11 +33,22 @@ steps:
     Contents: '**/*.apk'
     TargetFolder: '$(build.artifactstagingdirectory)'
     OverWrite: true
+- task: AppCenterDistribute@3
+  inputs:
+    serverEndpoint: 'AppCenter'
+    appSlug: 'ecabrejos/App1'
+    appFile: '$(build.artifactstagingdirectory)/app/build/outputs/apk/release/app-release-unsigned.apk'
+    buildVersion: '1'
+    symbolsOption: 'Android'
+    releaseNotesOption: 'input'
+    releaseNotesInput: 'hola'
+    destinationType: 'groups'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
     ArtifactName: 'apks'
     publishLocation: 'Container'
+
 
 
 
