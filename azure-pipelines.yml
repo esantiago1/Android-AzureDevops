@@ -22,15 +22,16 @@ steps:
     tasks: 'assembleRelease'
 - task: AndroidSigning@3
   inputs:
-    apkFiles: '**/demo.apk'
+    apkFiles: '**/*.apk'
     apksignerKeystoreFile: 'key-demo.jks'
     apksignerKeystorePassword: '$(storePassword)'
     apksignerKeystoreAlias: '$(keyAlias)'
     apksignerKeyPassword: '$(keyPassword)'
+    apksignerArguments: '--out $(build.sourcesdirectory)/app/build/outputs/apk/release/my-crazy-app.release.apk'''
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(system.defaultworkingdirectory)'
-    Contents: '**/*.apk'
+    SourceFolder: '$(system.sourcesdirectory)'
+    Contents: '**/*release.apk'
     TargetFolder: '$(build.artifactstagingdirectory)'
     OverWrite: true
 - task: PublishBuildArtifacts@1
