@@ -39,16 +39,6 @@ steps:
     PathtoPublish: '$(build.artifactstagingdirectory)'
     ArtifactName: 'apks'
     publishLocation: 'Container'
-- task: AppCenterDistribute@3
-  inputs:
-    serverEndpoint: 'AppCenter'
-    appSlug: 'ecabrejos/App1'
-    appFile: '**/*.apk'
-    buildVersion: '1'
-    symbolsOption: 'Android'
-    releaseNotesOption: 'file'
-    releaseNotesFile: 'Azure-AppCenter'
-    destinationType: 'groups'
 
 
 
