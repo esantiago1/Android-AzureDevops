@@ -48,7 +48,6 @@ steps:
     serviceConnection: 'GoogleService'
     apkFile: '$(build.artifactstagingdirectory)/app/build/outputs/apk/release/app-release-unsigned.apk'
     track: 'beta'
-    changeLogFile: 'holiiiiv'
     additionalApks: '**/*.apk'
 - task: PublishBuildArtifacts@1
   inputs:
