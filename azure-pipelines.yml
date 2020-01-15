@@ -43,17 +43,19 @@ steps:
     releaseNotesOption: 'input'
     releaseNotesInput: 'hola'
     destinationType: 'groups'
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-    ArtifactName: 'apks'
-    publishLocation: 'Container'
 - task: GooglePlayRelease@3
   inputs:
     serviceConnection: 'GoogleService'
     apkFile: '$(build.artifactstagingdirectory)/app/build/outputs/apk/release/app-release-unsigned.apk'
     track: 'beta'
-    additionalApks: 'hollii'
+    changeLogFile: 'holiiiiv'
+    additionalApks: '**/*.apk'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: 'apks'
+    publishLocation: 'Container'
+
 
 
 
