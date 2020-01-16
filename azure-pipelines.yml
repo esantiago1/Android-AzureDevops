@@ -45,9 +45,8 @@ steps:
 - task: GooglePlayRelease@3
   inputs:
     serviceConnection: 'GoogleService'
-    apkFile: '$(build.artifactstagingdirectory)/app/build/outputs/apk/release/app-release-unsigned.apk'
+    apkFile: '**/*.apk'
     track: 'beta'
-    additionalApks: '**/*.apk'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
