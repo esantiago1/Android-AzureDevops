@@ -53,12 +53,3 @@ steps:
     PathtoPublish: '$(build.artifactstagingdirectory)'
     ArtifactName: 'apks'
     publishLocation: 'Container'
-
-
-
-
-
-
-
-
-
