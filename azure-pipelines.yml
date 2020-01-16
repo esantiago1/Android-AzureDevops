@@ -38,7 +38,6 @@ steps:
     serverEndpoint: 'AppCenter'
     appSlug: 'ecabrejos/App1'
     appFile: '$(build.artifactstagingdirectory)/app/build/outputs/apk/release/app-release-unsigned.apk'
-    buildVersion: '1'
     symbolsOption: 'Android'
     releaseNotesOption: 'input'
     releaseNotesInput: 'hola'
