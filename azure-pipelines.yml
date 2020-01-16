@@ -42,6 +42,7 @@ steps:
     releaseNotesOption: 'input'
     releaseNotesInput: 'hola'
     destinationType: 'groups'
+    distributionGroupId: '58808a3c-0a62-4f85-a8f7-e003bdb98b74'
 - task: GooglePlayRelease@3
   inputs:
     serviceConnection: 'GoogleService'
