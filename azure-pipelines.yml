@@ -41,8 +41,8 @@ steps:
     symbolsOption: 'Android'
     releaseNotesOption: 'input'
     releaseNotesInput: 'hola'
-    destinationType: 'store'
-    destinationStoreId: '6c9ee7a9-5663-4ccb-b542-03e07670a4c0'
+    isMandatory: true
+    destinationType: 'groups'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
