@@ -41,12 +41,8 @@ steps:
     symbolsOption: 'Android'
     releaseNotesOption: 'input'
     releaseNotesInput: 'hola'
-    destinationType: 'groups'
-- task: GooglePlayRelease@3
-  inputs:
-    serviceConnection: 'GoogleService'
-    apkFile: '**/*.apk'
-    track: 'beta'
+    destinationType: 'store'
+    destinationStoreId: '6c9ee7a9-5663-4ccb-b542-03e07670a4c0'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
