@@ -6,8 +6,8 @@ android {
         applicationId "com.demo.demosomosoh"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 6
-        versionName "6.0.0"
+        versionCode 7
+        versionName "7.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -35,6 +35,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:16.0.8'
     implementation 'com.google.firebase:firebase-database:16.1.0'
     implementation 'com.android.support:design:28.0.0'
+    def appCenterSdkVersion = '2.5.1'
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
 
 
     //LIBRERIA EXTERNAS
