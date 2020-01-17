@@ -16,6 +16,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
 
 
 public class SplashActivity extends AppCompatActivity {
@@ -41,6 +42,7 @@ public class SplashActivity extends AppCompatActivity {
         setupToolbar();
 
         btNext.setOnClickListener(v -> {
+                     Analytics.trackEvent("My custom xd");
             verifyAccount();
         });
     }
