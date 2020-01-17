@@ -25,4 +25,19 @@
         android:text="@string/next" />
 
 
+    <android.support.design.button.MaterialButton
+        android:id="@+id/btError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Error" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/btError2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:visibility="gone"
+        android:text="Error" />
+
 </LinearLayout>

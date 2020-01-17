@@ -7,6 +7,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.microsoft.appcenter.AppCenter;
 
 
 public class SplashActivity extends AppCompatActivity {
@@ -21,19 +23,32 @@ public class SplashActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private Toolbar toolbar;
     private Button btNext;
+    private Button btError,btError2;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_splash);
         btNext = findViewById(R.id.btNext);
         toolbar = findViewById(R.id.toolbar);
+        btError=findViewById(R.id.btError);
+        btError.setOnClickListener(v->{
+            btError2.setText("error");
+        });
         auth = FirebaseAuth.getInstance();
         setupToolbar();
 
         btNext.setOnClickListener(v -> {
             verifyAccount();
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        AppCenter.setLogLevel(Log.VERBOSE);
     }
 
     @Override
